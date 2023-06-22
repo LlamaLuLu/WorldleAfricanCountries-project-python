@@ -50,7 +50,7 @@ t.shape(image)
 screen.setup(width=750, height=765)
 screen.tracer(0)
 
-chance = 5  # show lives on screen
+chance = 3  # show lives on screen
 lives = t.Turtle()
 lives.hideturtle()
 lives.penup()

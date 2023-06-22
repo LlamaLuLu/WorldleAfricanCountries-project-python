@@ -27,7 +27,7 @@ def check_high_score(correct, best):
         new_rec.hideturtle()
         new_rec.penup()
         new_rec.goto(new_rec.xcor(), 100)
-        new_rec.write(f"You made the new high score!\nYour score was: {best}", align="center",
+        new_rec.write(f"You made the new high score!\nYou are a true African. Your score was: {best}", align="center",
                          font=("Courier", 27, "normal"))
         screen.update()
         time.sleep(5)
@@ -84,7 +84,7 @@ while game_on:
     else:  # guessing
         if answer in all_countries:  # correct
             if answer in correct_answers:  # duplicate answer
-                answer = screen.textinput(title=f"{len(correct_answers)}/50 Countries Correct",
+                answer = screen.textinput(title=f"{len(correct_answers)}/54 Countries Correct",
                                                 prompt="You've already guessed that.\nWhat's another country's name? ")
                 continue
             correct_answers.append(answer)  # record correct guess
@@ -103,7 +103,7 @@ while game_on:
 
             screen.update()
             time.sleep(.7)
-            answer = screen.textinput(title=f"{len(correct_answers)}/50 Countries Correct",
+            answer = screen.textinput(title=f"{len(correct_answers)}/54 Countries Correct",
                                             prompt="That's correct!\nWhat's another country's name? ")
         else:  # wrong
             chance -= 1
@@ -121,10 +121,10 @@ while game_on:
                 revise_answers(correct_answers, all_countries)
                 check_high_score(correct_answers, high_score)
             elif chance == 1:
-                answer = screen.textinput(title=f"{len(correct_answers)}/50 Countries Correct",
+                answer = screen.textinput(title=f"{len(correct_answers)}/54 Countries Correct",
                                           prompt="That's incorrect... This is your LAST life!"
                                                  "\nWhat's another country's name? ")
             else:
-                answer = screen.textinput(title=f"{len(correct_answers)}/50 Countries Correct",
+                answer = screen.textinput(title=f"{len(correct_answers)}/54 Countries Correct",
                                           prompt=f"That's incorrect... You have {chance} lives "
                                                  f"left.\nWhat's another country's name? ")
